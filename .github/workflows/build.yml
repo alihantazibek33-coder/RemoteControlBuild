@@ -9,7 +9,7 @@ jobs:
         with:
           distribution: temurin
           java-version: 21
-      - run: chmod +x RemoteControl/gradlew || true
+      - run: unzip -o RemoteControl.zip
       - run: gradle build --no-daemon
         working-directory: RemoteControl
       - uses: actions/upload-artifact@v4
